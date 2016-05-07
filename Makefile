@@ -24,3 +24,6 @@ run-aiohttp:
 
 run-uvaio:
 	python uvaioserver.py
+
+run-uwsgi:
+	uwsgi --http :8000 --wsgi-file simpleapp.py --master --processes 6 --threads 2 --disable-logging
